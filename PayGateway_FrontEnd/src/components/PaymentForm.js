@@ -171,11 +171,11 @@ function PaymentForm() {
         <Form>
             <Form.Group className="mb-3">
                 <Form.Label>Credit Card Number</Form.Label>
-                <Form.Control type="number" placeholder="Enter Credit Card Number" name="creditCardNumber" disabled={isDataEnetered} onChange={handleInputChange} />
+                <Form.Control type="input" placeholder="Enter Credit Card Number" name="creditCardNumber" disabled={isDataEnetered} onChange={handleInputChange} />
             </Form.Group>
             <Form.Group className="mb-3">
                 <Form.Label>CVC</Form.Label>
-                <Form.Control type="number" placeholder="Enter CVC" name="cvc" disabled={isDataEnetered} onChange={handleInputChange} />
+                <Form.Control type="input" placeholder="Enter CVC" name="cvc" disabled={isDataEnetered} onChange={handleInputChange} />
             </Form.Group>
             <Form.Group className="mb-3">
                 <Row>

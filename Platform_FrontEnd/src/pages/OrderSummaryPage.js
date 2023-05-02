@@ -84,6 +84,7 @@ function OrderSummaryPage() {
                                 id="deliveryOption1"
                                 name="deliveryOption"
                                 label="Not needed"
+                                icon=""
                                 className="inline-block"
                                 defaultChecked={(deliveryCharge === 0)}
                                 onClick={(event) => { updateOrderAndDeliveryInformation(event, "delivery_charge", 0) }}
@@ -93,35 +94,39 @@ function OrderSummaryPage() {
                                 type="radio"
                                 id="deliveryOption2"
                                 name="deliveryOption"
-                                label="Express Delivery"
+                                label=""
                                 className="inline-block ml-p5"
-                                onClick={(event) => { updateOrderAndDeliveryInformation(event, "delivery_charge", 600) }}
+                                onClick={(event) => { updateOrderAndDeliveryInformation(event, "delivery_charge", 1800) }}
                                 value={1}
                             />
+                            <img src={deliveryOption1} className="inline-block" />
                             <Form.Check
                                 type="radio"
                                 id="deliveryOption3"
                                 name="deliveryOption"
-                                label="Fast Delivery"
+                                label=""
                                 className="inline-block ml-p5"
-                                onClick={(event) => { updateOrderAndDeliveryInformation(event, "delivery_charge", 700) }}
+                                onClick={(event) => { updateOrderAndDeliveryInformation(event, "delivery_charge", 1500) }}
                                 value={2}
                             />
+                            <img src={deliveryOption2} className="inline-block" />
+
                             <Form.Check
                                 type="radio"
                                 id="deliveryOption4"
                                 name="deliveryOption"
-                                label="Your Delivery"
+                                label=""
                                 className="inline-block ml-p5"
-                                onClick={(event) => { updateOrderAndDeliveryInformation(event, "delivery_charge", 800) }}
+                                onClick={(event) => { updateOrderAndDeliveryInformation(event, "delivery_charge", 1000) }}
                                 value={3}
                             />
+                            <img src={deliveryOption3} className="inline-block" />
                         </div>
-                        <div>
+                        {/* <div>
                             <img src={deliveryOption1} className="inline-block" />
                             <img src={deliveryOption2} className="inline-block ml-p5" />
                             <img src={deliveryOption3} className="inline-block ml-p5" />
-                        </div>
+                        </div> */}
                     </Form.Group>
                     <Form.Group className="mb-3">
                         <Form.Label>Name</Form.Label>
@@ -156,15 +161,15 @@ function OrderSummaryPage() {
                     </Form.Group>
                     <Form.Group className="mb-3">
                         <Form.Label>Email</Form.Label>
-                        <Form.Control type="email" name="email" placeholder="Delivery Address" onChange={(event) => { updateOrderInformation(event) }} />
+                        <Form.Control type="email" name="email" placeholder="Email" onChange={(event) => { updateOrderInformation(event) }} />
                     </Form.Group>
                     <Form.Group className="mb-3">
                         <Form.Label>Phone Number</Form.Label>
-                        <Form.Control type="number" name="phoneNumber" placeholder="Phone Number" onChange={(event) => { updateOrderInformation(event) }} />
+                        <Form.Control type="input" name="phoneNumber" placeholder="Phone Number" onChange={(event) => { updateOrderInformation(event) }} />
                     </Form.Group>
                     <Form.Group className="mb-3">
-                        <Form.Label>Zip Code</Form.Label>
-                        <Form.Control type="number" name="zipCode" placeholder="Zip Code" onChange={(event) => { updateOrderInformation(event) }} />
+                        <Form.Label>Postal Code</Form.Label>
+                        <Form.Control type="input" name="postalCode" placeholder="Postal Code" onChange={(event) => { updateOrderInformation(event) }} />
                     </Form.Group>
                     <Form.Group className="mb-3">
                         <Form.Check type="checkbox" defaultChecked={licenseAcceptance} label="I accept the terms and conditions" onClick={() => toggleLicenseAcceptance()} />

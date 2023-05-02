@@ -40,8 +40,8 @@ public class Order {
     @Column(name = "deliveryOption")
     private String deliveryOption;
     
-    @Column(name = "zipCode")
-    private String zipCode;
+    @Column(name = "postalCode")
+    private String postalCode;
     
     @Column(name = "phoneNumber")
     private String phoneNumber;
