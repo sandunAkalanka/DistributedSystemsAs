@@ -15,23 +15,23 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor
 public class OrderItem {
-	
+
 	@EmbeddedId
 	private OrderItemKey id;
-	
+
 	@ManyToOne
 	@MapsId("itemId")
 	@JoinColumn(name = "item_id")
 	private Item item;
-	
+
 	@ManyToOne
 	@MapsId("orderId")
 	@JoinColumn(name = "order_id")
 	private Order order;
-	
+
 	@Column(name = "amount")
 	private float amount;
-	
+
 	@Column(name = "no_of_items")
 	private int noOfItems;
 }

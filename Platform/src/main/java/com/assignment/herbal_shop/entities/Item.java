@@ -1,6 +1,5 @@
 package com.assignment.herbal_shop.entities;
 
-
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -24,16 +23,16 @@ public class Item {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
-	
+
 	@Column
 	private String name;
-	
+
 	@Column
 	private String code;
-	
+
 	@Column
 	private String description;
-	
+
 	@Column
 	private float unitPrice;
 }

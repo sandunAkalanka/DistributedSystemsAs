@@ -1,11 +1,12 @@
 import Container from 'react-bootstrap/Container';
 import Navbar from 'react-bootstrap/Navbar';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import logo from '../assets/logo.jpg';
+import logo from '../assets/logo.png';
 import cart from '../assets/cart.png';
 import Badge from 'react-bootstrap/esm/Badge';
 import { useContext } from 'react';
 import { ShopContext } from '../ShopContext';
+import './Header.css';
 
 function Header(props) {
   const shopContext = useContext(ShopContext);
@@ -16,17 +17,17 @@ function Header(props) {
   </div> : null;
 
   return (
-    <Navbar bg="dark" variant="dark">
+    <Navbar className="navbar-container">
       <Container>
         <Navbar.Brand href="/">
             <img
               alt="logo"
               src={logo}
-              width="30"
-              height="30"
+              width="170"
+              height="50"
               className="d-inline-block align-top"
             />
-            MediHerbs
+            {/* MediHerbs */}
         </Navbar.Brand>
       </Container>
       {cartWidget}

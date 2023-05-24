@@ -1,4 +1,5 @@
 import Carousel from 'react-bootstrap/Carousel';
+import './CarouselItem.css';
 import sliderImg1 from '../assets/wallpaper1.jpg';
 import sliderImg2 from '../assets/wallpaper2.jpg';
 import sliderImg3 from '../assets/wallpaper3.jpg';
@@ -6,41 +7,40 @@ import sliderImg3 from '../assets/wallpaper3.jpg';
 function CarouselItem() {
   return (
     <Carousel>
-      <Carousel.Item interval={2000}>
+      <Carousel.Item interval={1500}>
         <img
-          className="d-block w-100"
+          className="d-block w-100 transparent-image"
           src={sliderImg1}
           alt="First slide"
-          height='400px'
-          //opacity='60%'
+          height='450px'
         />
         <Carousel.Caption>
-          <h3>Heal with nature</h3>
-          <p>Nurture your body, naturally with our herbal remedies!</p>
+          <h1>Herbal Beverages</h1>
+          <h3>Experience the greenish freshness!</h3>
         </Carousel.Caption>
       </Carousel.Item>
-      <Carousel.Item interval={2000}>
+      <Carousel.Item interval={1500}>
         <img
-          className="d-block w-100"
+          className="d-block w-100 transparent-image"
           src={sliderImg2}
           alt="Second slide"
-          height='400px'
+          height='450px'
         />
         <Carousel.Caption>
-          <h3>Fragrance and Beauty</h3>
-          <p>Mother Nature's medicine - discover the power of herbs today!</p>
+          <h1>Healthy Snacks</h1>
+          <h3>Taste the deliciousness of natural sugar!</h3>
         </Carousel.Caption>
       </Carousel.Item>
-      <Carousel.Item interval={2000}>
+      <Carousel.Item interval={1500}>
         <img
-          className="d-block w-100"
+          className="d-block w-100 transparent-image"
           src={sliderImg3}
           alt="Third slide"
-          height='400px'
+          height='450px'
         />
         <Carousel.Caption>
-          <h3>Herbal healing</h3>
-          <p>Herbal healing for a healthier you - try our natural remedies now!</p>
+          <h1>Fresh Fruits</h1>
+          <h3>Carefully selected fruits of the highest quality!</h3>
         </Carousel.Caption>
       </Carousel.Item>
     </Carousel>

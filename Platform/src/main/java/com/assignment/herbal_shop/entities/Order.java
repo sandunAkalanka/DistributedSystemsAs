@@ -27,41 +27,41 @@ import lombok.Setter;
 @AllArgsConstructor
 public class Order {
 
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private long Id;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private long Id;
 
-	@Column(name = "name")
+    @Column(name = "name")
     private String name;
-    
+
     @Column(name = "deliveryAddress")
     private String deliveryAddress;
-    
+
     @Column(name = "deliveryOption")
     private String deliveryOption;
-    
+
     @Column(name = "postalCode")
     private String postalCode;
-    
+
     @Column(name = "phoneNumber")
     private String phoneNumber;
-    
+
     @Column(name = "email")
     private String email;
-    
+
     @Column(name = "status")
     private String orderStatus;
-    
-    @Column(name = "transaction_id",nullable = true)
+
+    @Column(name = "transaction_id", nullable = true)
     private String transactionId;
-    
-    @Column(name = "delivery_charge",nullable = true)
+
+    @Column(name = "delivery_charge", nullable = true)
     private float deliveryCharge;
-    
+
     @Column(name = "commission")
     private float commission;
-    
+
     @JsonIgnore
     @OneToMany(mappedBy = "order")
-	private Set<OrderItem> orderItems = new HashSet<>();
+    private Set<OrderItem> orderItems = new HashSet<>();
 }

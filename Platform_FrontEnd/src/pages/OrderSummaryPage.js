@@ -156,7 +156,7 @@ function OrderSummaryPage() {
                         </div>
                     </Form.Group>
                     <Form.Group className="mb-3">
-                        <Form.Label>Delivey Address</Form.Label>
+                        <Form.Label>Delivery Address</Form.Label>
                         <Form.Control as="textarea" name="deliveryAddress" placeholder="Delivery Address" rows={5} onChange={(event) => { updateOrderInformation(event) }} />
                     </Form.Group>
                     <Form.Group className="mb-3">

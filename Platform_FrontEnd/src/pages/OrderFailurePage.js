@@ -1,6 +1,6 @@
 import Header from "../components/Header";
 import { Card, ListGroup } from "react-bootstrap";
-import logo from "../assets/logo.jpg";
+import logo from "../assets/logo.png";
 import "../components/utilities.css";
 import './OrderSuccessPage.css';
 import { Link } from "react-router-dom";
